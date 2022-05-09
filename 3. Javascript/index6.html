@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Qual é o número?</p>
+
+    <input id="guess" />
+
+    <button id="submit">Guess</button>
+
+    <script>
+        document.getElementById("submit").onclick = function () {
+            var x = Math.floor(6 * (Math.random()));
+            if (x == document.getElementById("guess").value) {
+                alert("Parabéns, você acertou!")
+            }
+            else {
+                alert("Você errou, o número era " + x)
+                x = Math.floor(6 * (Math.random()));
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

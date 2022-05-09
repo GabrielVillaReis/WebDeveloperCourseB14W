@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .nav-item {
+            padding-right: 20px;
+        }
+
+        .mb-3 input {
+            width: 250px;
+        }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <div class="container-fluid">
+
+            <a href="" class="navbar-brand" style="padding-right: 20px;">My Website</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Page 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Page 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Page 3</a></li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="container-fluid" id="app">
+
+        <h1>Hello World!</h1>
+
+        <form>
+
+            <div class="mb-3 row">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-20">
+                    <input type="email" class="form-control" name="email" id="inputEmail" v-model="x">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-20">
+                    <input type="password" class="form-control" name="password" id="inputPassword" v-model="y">
+                </div>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" @click="checkBoxClick">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Me mantenha logado
+                </label>
+            </div>
+
+        </form>
+
+        <button style="margin-top: 10px;" class="btn btn-primary" @click="addReg">Submit</button>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Keep Log</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="register in registers">
+                    <th scope="row">{{ register.id }}</th>
+                    <td>{{ register.email}}</td>
+                    <td>{{ register.password}}</td>
+                    <td>{{ register.checkbox}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>{{ registers }}</p>
+        <p>{{ id }}</p>
+
+    </div>
+
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+
+</body>
+
+</html>

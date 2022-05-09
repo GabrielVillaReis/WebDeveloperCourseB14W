@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wwwwwwweeeeeeeeeeeeeeee</title>
+</head>
+
+<body>
+
+    <p>Qual é o clima?</p>
+
+    <input id="clima" />
+
+    <button id="submit">Enviar</button>
+
+    <script type="text/javascript">
+
+        var clima;
+
+        document.getElementById("submit").onclick = function () {
+            clima = document.getElementById("clima").value;
+            if (clima != "") {
+                alert("Está " + clima)
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

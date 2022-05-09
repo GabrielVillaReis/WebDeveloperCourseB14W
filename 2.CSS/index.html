@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <title>FT CSS</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style type="text/css">
+        .first {
+            color:darkred;
+            font-size: 300%;
+        }
+        #secondexclusive {
+            color: limegreen;
+        }
+        #thirdexclusive {
+            color: limegreen;
+        }
+        .underline{
+            text-decoration: underline;
+        }
+        .negrito{
+            font-weight: bold;
+        }
+
+        .bar{
+            background-color: black;
+            height:100px ;
+            position: fixed;
+            width:1920px ;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+        .titulo {
+            background-color:blue;
+            width: 250px;
+            height: 300px;
+            position:relative;
+            padding: 10px;
+            left:100px;
+            top:100px;
+            z-index: 1;
+        }
+
+        .resto{
+            background-color:#E90D0D;
+            width:300px ;
+            height:650px ;
+            margin: 90px 0px 10px 100px;
+        }
+
+        p {
+            padding:0;
+            margin: 0;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="bar"></div>
+<div class="titulo">
+    <p class="first">Nenhuma coisa.</p>
+</div>
+<div class = "resto">
+    <p class="first">Segundo qualquer coisa da mesma classe</p>
+    <p id="secondexclusive">Mais qualquer coisa.</p>
+    <p id="thirdexclusive" class="first">Qualquer coisa com as propriedades da classe e do id</p>
+</div>
+    <p>A terceira <span class ="underline first negrito">palavra</span> desse paragrafo vai ser sublinhada</p>
+</body>
+</html>

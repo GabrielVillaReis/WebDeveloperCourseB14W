@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Challenge Js</title>
+
+</head>
+
+<body>
+
+    <button id="magicbutton">Butão mágico</button>
+
+    <div id="fon">PF NÃO CLICA NO BUTÃO AQUI EM CIMA VC VAI ME MATAR</div>
+
+    <br>
+
+    <input id="myInput" type="text" value="test" />
+
+    <button id="textChanger">Clica aqui para mudar o texto abaixo</button>
+
+    <br>
+
+
+
+    <p id="text">Viado pra krl vc, duvido tu escrever algo ai</p>
+    <script type="text/javascript">
+
+        var divId = "fon";
+        var newText;
+        var myArray = new Array();
+
+        myArray[0] = "pizza";
+        myArray[1] = "chocolate";
+
+        document.getElementById("magicbutton").onclick = function () {
+
+            document.getElementById(divId).style.display = "none";
+        }
+
+        document.getElementById("textChanger").onclick = function () {
+
+            newText = document.getElementById("myInput").value;
+
+            document.getElementById("text").innerHTML += "<br>" + newText;
+        }
+    </script>
+
+</body>
+
+</html>
